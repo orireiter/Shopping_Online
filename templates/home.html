@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<head>
+    <title>כלבו</title>
+    <link rel="stylesheet" type="text/css" href="..\static\home.css">
+    <link rel="shortcut icon" type="image/png" href="..\static\yotvata_logo.png"/>
+</head>
+
+<body>
+    <div id="intro">
+        <h1 id="header1">כלבו אונליין</h1>
+        <p id="hello">שלום {{ username }}</p>
+    </div>
+    
+    <div id="main">
+        
+        <div id="item_list">
+        {% for x in range(100) %}
+            <div class="list_obj" style="border: 1px solid black">
+                <img class="item_icon_list" src="..\static\yotvata_logo.png" alt="yotvata">    
+                <p >yotvata</p>
+            </div>
+        {% endfor %}
+        </div>
+
+
+        
+        <div id="shopping_bag">
+            <div id="shopping_bag_list">
+            {% for x in range(40) %} 
+                <p>פה מוצג סל הקניות</p>
+            {% endfor %}
+            </div>
+            <br>
+            <br>
+            
+            <button style="padding: 40px;" >הזמן</button>
+        </div>
+        
+    </div>
+</body>
+</html>

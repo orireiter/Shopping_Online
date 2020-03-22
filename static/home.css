@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: right;
+}
+
+#intro {
+    background-color: gray;
+    max-width: min-content;
+    align-self: center;
+}
+
+#main {
+    
+    border: 1px solid black;
+    overflow: hidden; /* will contain if #first is longer than #second */
+    max-width: 100%;
+}
+#item_list {
+    max-width: 80%;
+    min-width: 80%;
+    float:right; /* add this */
+    border: 1px solid red;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.item_icon_list {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+#shopping_bag {
+    width: 19.7%;
+    border: 1px solid green;
+    overflow: auto; /* if you don't want #second to wrap below #first */
+    float: left,; /* add this */
+    position: fixed;
+    max-width: 19.7%;
+    max-height: 450px;
+    
+}
+
+#shopping_bag_list {
+    
+    overflow: auto; /* if you don't want #second to wrap below #first */
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
