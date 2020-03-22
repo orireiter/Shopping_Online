@@ -15,10 +15,10 @@
     <div id="main">
         
         <div id="item_list">
-        {% for x in range(100) %}
+        {% for item in get_40 %}
             <div class="list_obj" style="border: 1px solid black">
                 <img class="item_icon_list" src="..\static\yotvata_logo.png" alt="yotvata">    
-                <p >yotvata</p>
+                <p>{{ item['item name'] }}</p>
             </div>
         {% endfor %}
         </div>
