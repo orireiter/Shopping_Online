@@ -8,7 +8,6 @@
 
 <body>
     <div id="intro">
-        <h1 id="header1">כלבו אונליין</h1>
         <p id="hello">שלום {{ username }}</p>
     </div>
     
@@ -17,8 +16,9 @@
         <div id="item_list">
         {% for item in get_40 %}
             <div class="list_obj" style="border: 1px solid black">
-                <img class="item_icon_list" src="..\static\yotvata_logo.png" alt="yotvata">    
-                <p>{{ item['item name'] }}</p>
+                <img class="item_icon_list" src="..\static\COLBO_IMG\{{ item['Barcode'] }}.png" alt="תמונה לא זמינה כרגע">    
+                <p class="item_name_list">{{ item['Name'] }}</p>
+                <p class="item_price_list">{{ item['Price'] }}</p>
             </div>
         {% endfor %}
         </div>
@@ -37,6 +37,14 @@
             <button style="padding: 40px;" >הזמן</button>
         </div>
         
+    </div>
+    <div id="outro">
+        <a href="{{ next1 }}">
+            הבא
+        </a>
+        <a href="{{ back1 }}">
+            הקודם
+        </a>
     </div>
 </body>
 </html>

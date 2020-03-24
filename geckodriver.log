@@ -1,0 +1,186 @@
+1584983394519	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Temp\\rust_mozprofileYiXhuo"
+1584983394749	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1584983394984	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1584983394984	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1584983394984	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1584983394984	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1584983396537	Marionette	INFO	Listening on port 55658
+1584983396628	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1A0011,name=PBackgroundStorage::Msg_Observe) Channel error: cannot send/recv
+
+1585045393932	Marionette	INFO	Stopped listening on port 55658
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+opped listening on port 53194
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1584975077435	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Temp\\rust_mozprofile6muRQ3"
+1584975077658	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1584975077883	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1584975077883	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1584975077883	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1584975077883	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1584975078854	Marionette	INFO	Listening on port 52136
+1584975078943	Marionette	WARN	TLS certificate errors will be ignored for this session
+1584975083892	Marionette	INFO	Stopped listening on port 52136
+1584975678548	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Temp\\rust_mozprofile6ZpVmO"
+1584975678769	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1584975678997	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1584975678997	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1584975678997	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1584975678997	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1584975679947	Marionette	INFO	Listening on port 52337
+1584975680052	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+1584975747010	Marionette	INFO	Stopped listening on port 52337
+1584976125263	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Temp\\rust_mozprofileTbsmGg"
+1584976125486	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1584976125709	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1584976125709	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1584976125709	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1584976125709	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1584976126693	Marionette	INFO	Listening on port 52588
+1584976126772	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+1584976321294	Marionette	INFO	Stopped listening on port 52588
+1584977010459	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Temp\\rust_mozprofileBW9ulp"
+1584977010685	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1584977010915	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1584977010915	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1584977010915	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1584977010915	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1584977011901	Marionette	INFO	Listening on port 52955
+1584977011965	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+JavaScript error: resource:///actors/ContentMetaChild.jsm, line 167: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: resource:///actors/ContentMetaChild.jsm, line 167: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: chrome://marionette/content/proxy.js, line 222: TypeError: this.browser.driver.dialogObserver is null
+JavaScript error: chrome://marionette/content/proxy.js, line 222: TypeError: this.browser.driver.dialogObserver is null
+1584977124761	Marionette	INFO	Stopped listening on port 52955
+Hsxo"
+1584977098950	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1584977099178	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1584977099178	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1584977099179	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1584977099179	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1584977100146	Marionette	INFO	Listening on port 53112
+1584977100243	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+1584977125754	Marionette	INFO	Stopped listening on port 53112
+1584977222299	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Temp\\rust_mozprofile9fq3Dz"
+1584977222522	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1584977222750	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1584977222751	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1584977222751	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1584977222751	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1584977223709	Marionette	INFO	Listening on port 53223
+1584977223806	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+1584978429788	Marionette	INFO	Stopped listening on port 53223
+ram Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Temp\\rust_mozprofileInrX8k"
+1584977644077	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1584977644305	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1584977644305	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1584977644305	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1584977644305	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1584977645249	Marionette	INFO	Listening on port 53424
+1584977645360	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+1584977669462	Marionette	INFO	Stopped listening on port 53424
+1584977910478	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Temp\\rust_mozprofile0TbrxZ"
+1584977910702	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1584977910931	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1584977910931	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1584977910932	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1584977910932	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1584977911875	Marionette	INFO	Listening on port 53574
+1584977911988	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+1584978426183	Marionette	INFO	Stopped listening on port 53574
+1584978469353	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Temp\\rust_mozprofileDkPMoP"
+1584978469574	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1584978469803	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1584978469803	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1584978469803	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1584978469803	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1584978470744	Marionette	INFO	Listening on port 53758
+1584978470859	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+JavaScript error: resource:///actors/ContentMetaChild.jsm, line 167: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+JavaScript error: resource:///actors/ContentMetaChild.jsm, line 167: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: resource:///actors/ContentMetaChild.jsm, line 167: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: resource:///actors/ContentMetaChild.jsm, line 167: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: resource:///actors/ContentMetaChild.jsm, line 167: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1584978491298	Marionette	INFO	Stopped listening on port 53758
+1584978559637	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Temp\\rust_mozprofilenLFUNL"
+1584978559871	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1584978560103	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1584978560103	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1584978560103	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1584978560104	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1584978561052	Marionette	INFO	Listening on port 53896
+1584978561144	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+JavaScript warning: https://apps.bumpyardpro.com/Scripts/connect.js, line 2125: unreachable code after return statement
+JavaScript error: resource:///actors/ContentMetaChild.jsm, line 167: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: resource:///actors/ContentMetaChild.jsm, line 167: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: resource:///actors/ContentMetaChild.jsm, line 167: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: resource:///actors/ContentMetaChild.jsm, line 167: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: resource:///actors/ContentMetaChild.jsm, line 167: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: chrome://marionette/content/proxy.js, line 222: TypeError: this.browser.driver.dialogObserver is null
+JavaScript error: chrome://marionette/content/proxy.js, line 222: TypeError: this.browser.driver.dialogObserver is null
+1584982840773	Marionette	INFO	Stopped listening on port 53896
