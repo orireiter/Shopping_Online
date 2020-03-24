@@ -1,5 +1,5 @@
 from flask import Flask, redirect, render_template, request
-import db_for_home
+import db_for_home, db_search
 
 app = Flask(__name__)
 
@@ -10,6 +10,7 @@ def get_home():
     return redirect("/login")
 
 # default route, not used here
+
 # -----------------------------------------------------------#
 
 @app.route("/<username>/<page_num>")
@@ -33,6 +34,7 @@ def home(username, page_num):
 # jumping to certain page
 # ability to choose how much of each object to add
 # check out option
+
 # -----------------------------------------------------------#
 
 @app.route("/login", methods=['POST','GET'])
@@ -55,7 +57,17 @@ def login():
 # the login page, requires work, need to add the users to db 
 # and retrieve their pass to validate, and not let passing through
 # straight to the shopping part
+
 # -----------------------------------------------------------#
+
+@app.route("/<username>/search/")
+def search(username):
+    
+    search_list = db_search.search("פסטה")
+
+    return render_template("search.html", 
+    search_list=search_list, username=username)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
