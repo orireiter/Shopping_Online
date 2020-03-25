@@ -8,11 +8,19 @@
 
 <body>
     <div id="intro">
-        <p id="hello">שלום {{ username }}</p>
+        <p id="hello">שלום {{ username }}, חיפשת {{ query }}</p>
+        <div id="search_bar">
+            <form action="/{{ username }}/search" method="POST">
+                <input type="text" name="query" placeholder="חפש..."> <input type="submit" value="חפש" id="submit">
+            </form>
+        </div>
     </div>
     
     <div id="main">
-        
+    {% if search_list=="klum" %}
+        <p>לא נמצאו פריטים</p>
+        <a href="{{ back2 }}">חזור</a>
+    {% else %}    
         <div id="item_list">
         {% for item in search_list %}
             <div class="list_obj" style="border: 1px solid black">
@@ -22,10 +30,12 @@
             </div>
         {% endfor %}
         </div>
-
+    {% endif %}
 
         
         <div id="shopping_bag">
+            <iframe src="http://127.0.0.1:5001/shop/{{ username }}" frameborder="0"></iframe>
+            <!--    
             <div id="shopping_bag_list">
             {% for x in range(40) %} 
                 <p>פה מוצג סל הקניות</p>
@@ -35,11 +45,14 @@
             <br>
             
             <button style="padding: 40px;" >הזמן</button>
+        -->
         </div>
         
     </div>
     <div id="outro">
-        <p>test</p>
+    {% if search_list!="klum" %}
+        <a href="{{ back2 }}">חזור</a>
+    {% endif %}
     </div>
 </body>
 </html>

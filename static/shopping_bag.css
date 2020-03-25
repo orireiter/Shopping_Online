@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+    
+}
+
+body {
+    background-color: darkgrey;
+}
+
+#shopping_bag_list {
+    overflow: auto; /* if you don't want #second to wrap below #first */
+    
+    float: right; /* add this */
+    
+}
+
+p {
+    border: 1px solid red;
+    padding: 20px;
+}

@@ -29,7 +29,7 @@ def home(username, page_num):
          username=username, get_40=get_40, page_num=page_num, next1=next1,
          back1=back1)
 
-# central part, need to add search bar
+# central part
 # need to make the shopping bag and ability to add to it
 # jumping to certain page
 # ability to choose how much of each object to add
@@ -60,14 +60,19 @@ def login():
 
 # -----------------------------------------------------------#
 
-@app.route("/<username>/search/")
+@app.route("/<username>/search", methods=['POST','GET'])
 def search(username):
-    
-    search_list = db_search.search("פסטה")
-
-    return render_template("search.html", 
-    search_list=search_list, username=username)
-
+    try:
+        query = str(request.form["query"])
+        search_list = db_search.search(query)
+        
+        if search_list == "klum":
+            return redirect(request.referrer)
+        back2 = request.referrer
+        return render_template("search.html", 
+        search_list=search_list, username=username, back2=back2, query=query)
+    except:
+        return redirect("/"+username+"/"+"1")
 
 if __name__ == "__main__":
     app.run(debug=True)

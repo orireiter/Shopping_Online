@@ -27,7 +27,16 @@ def db_info():
 def search(query):
     collection = db_info()
 
-    search_filter= { 'Name': { '$regex': str(query)+' *' } }
-    search_list = collection.find(filter=search_filter)
+    empty_query_check = query.count(" ")
+    
+    '''print("spaces ", empty_query_check)
+    print("query len ", len(query))'''
+
+    if query == "" or empty_query_check == len(query):
+        klum = "klum"
+        return klum
+    else:
+        search_filter= { 'Name': { '$regex': str(query)+' *' } }
+        search_list = collection.find(filter=search_filter)
 
     return search_list

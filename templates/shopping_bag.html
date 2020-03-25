@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<head>
+    <title>כלבו</title>
+    <link rel="stylesheet" type="text/css" href="..\..\static\shopping_bag.css">
+    <link rel="shortcut icon" type="image/png" href="..\..\static\yotvata_logo.png"/>
+</head>
+
+<body>
+    <div id="shopping_bag_list">
+        {% for x in leng %} 
+            <form>
+                <button type="submit" name="delete_item" value="{{ item_names[x] }},{{ username }}" formmethod="POST" formaction="http://127.0.0.1:5001/delete_item">
+                    מחק אחד
+                </button>
+                <button type="submit" name="delete_items" value="{{ item_names[x] }},{{ username }}" formmethod="POST" formaction="http://127.0.0.1:5001/delete_items">
+                    מחק הכל
+                </button>
+            </form>
+            <p>{{  item_names[x] }}: {{ amount[x] }}</p>
+        {% endfor %}
+        </div>
+        <br>
+        <br>
+        <form>
+            <button type="submit" name="delete_all" value="{{ username }}" formmethod="POST" formaction="http://127.0.0.1:5001/delete_all">
+                נקה סל
+            </button>
+        </form>
+        <button style="padding: 40px; border-radius: 22px; position: fixed;" >הזמן</button>
+</body>
+</html>
