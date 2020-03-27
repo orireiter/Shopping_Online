@@ -2,15 +2,15 @@
 
 <head>
     <title>כלבו</title>
-    <link rel="stylesheet" type="text/css" href="..\static\home.css">
-    <link rel="shortcut icon" type="image/png" href="..\static\yotvata_logo.png"/>
+    <link rel="stylesheet" type="text/css" href="..\..\static\home.css">
+    <link rel="shortcut icon" type="image/png" href="..\..\static\yotvata_logo.png"/>
 </head>
 
 <body>
     <div id="intro">
         <p id="hello">שלום {{ username }}</p>
         <div id="search_bar">
-            <form action="/{{ username }}/search" method="POST">
+            <form action="/search/{{ id }}/{{ username }}" method="POST">
                 <input type="text" name="query" placeholder="חפש..."> <input type="submit" value="חפש" id="submit">
             </form>
         </div>
@@ -21,7 +21,7 @@
         <div id="item_list">
         {% for item in get_40 %}
             <div class="list_obj" style="border: 1px solid black">
-                <img class="item_icon_list" src="..\static\COLBO_IMG\{{ item['Barcode'] }}.png" alt="תמונה לא זמינה כרגע">    
+                <img class="item_icon_list" src="..\..\static\COLBO_IMG\{{ item['Barcode'] }}.png" alt="תמונה לא זמינה כרגע">    
                 <p class="item_name_list">{{ item['Name'] }}</p>
                 <p class="item_price_list">{{ item['Price'] }}</p>
                 <form>

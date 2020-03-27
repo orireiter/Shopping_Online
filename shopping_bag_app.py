@@ -1,5 +1,16 @@
+# flask imports
 from flask import Flask, redirect, render_template, request
-import db_for_home, db_search, shopping_processor
+# homemade imports
+import db_for_home, db_search, shopping_processor, barcode_maker
+# general use imports
+import datetime, os, json, email, smtplib, ssl
+# email related
+from email import encoders
+from email.mime.base import MIMEBase
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+
+
 
 app = Flask(__name__)
 
@@ -7,6 +18,10 @@ app = Flask(__name__)
 @app.route("/shop/<username>")
 def shopping_bag(username):
     amount, item_names = shopping_processor.load_order(username=username)
+    if amount == 'empty':
+        amount = ''
+        item_names = ''
+
     length_of_list = range(len(amount))
     
     return render_template("shopping_bag.html",
@@ -30,6 +45,20 @@ def add_item():
         print("didnt work")
 
     back1 = "/shop/"+str(username)
+    return redirect(back1)
+
+@app.route("/add_free_item", methods=['POST'])
+def add_free_item():
+
+    try:
+        item4 = str(request.form["item"])
+        username4 = str(request.form["user"])
+        print(item4, username4)
+        shopping_processor.add_item(item=item4, username=username4)
+    except:
+        print("didnt work")
+
+    back1 = "/shop/"+str(username4)
     return redirect(back1)
 
 @app.route("/delete_item", methods=['POST'])
@@ -62,14 +91,7 @@ def delete_items():
     back1 = request.referrer
     return redirect(back1) 
 
-@app.route("/delete_all", methods=['POST'])
-def delete_all():
-    try:
-        user3 = request.form['delete_all']
-        
-        shopping_processor.delete_all(username=user3)
-    except:
-        print("cant delete")
-    back1 = request.referrer
-    return redirect(back1) 
-app.run(debug=True, port=5001)
+
+
+if __name__ == "__main__":
+    app.run(debug=True, port=5001)
