@@ -7,46 +7,41 @@
 </head>
 
 <body>
+    <p id="hello">שלום {{ username }}, חיפשת {{ query }}</p>
     <div id="intro">
-        <p id="hello">שלום {{ username }}, חיפשת {{ query }}</p>
         <div id="search_bar">
             <form action="/search/{{ id }}/{{ username }}" method="POST">
-                <input type="text" name="query" placeholder="חפש..."> <input type="submit" value="חפש" id="submit">
+                <input type="search" name="query" placeholder="חפש/י"> 
+                <button id="back2" href="{{ back2 }}">חזור</button>
+                <button type="submit" id="submit">חיפוש</button>
             </form>
         </div>
     </div>
     
-    <div id="main">
-    {% if search_list=="klum" %}
-        <p>לא נמצאו פריטים</p>
-        <a href="{{ back2 }}">חזור</a>
-    {% else %}    
+    <div id="main">    
         <div id="item_list">
         {% for item in search_list %}
-            <div class="list_obj" style="border: 1px solid black">
-                <img class="item_icon_list" src="..\..\static\COLBO_IMG\{{ item['Barcode'] }}.png" alt="תמונה לא זמינה כרגע">    
+            <div class="list_obj">
+                <img class="item_icon_list" src="..\..\static\COLBO_IMG\{{ item['Barcode'] }}.png" onerror="this.src='{{ yot }}';" width="100px" height="100px">    
                 <p class="item_name_list">{{ item['Name'] }}</p>
                 <p class="item_price_list">{{ item['Price'] }}</p>
                 <form>
-                    <button type="submit" name="add_item" value="{{ item['Name'] }},{{ username }}" formmethod="POST" formaction="http://127.0.0.1:5001/add_item" formtarget="side">
+                    <button type="submit" name="add_item" value="{{ item['Name'] }},{{ username }}" formmethod="POST" formaction="http://172.16.0.17:5001/add_item" formtarget="side">
                         הוסף
                     </button>
                 </form>
             </div>
         {% endfor %}
+            
         </div>
-    {% endif %}
 
-        
         <div id="shopping_bag">
-            <iframe name="side" src="http://127.0.0.1:5001/shop/{{ username }}" frameborder="0"></iframe>
+            <iframe name="side" src="http://172.16.0.17:5001/shop/{{ username }}" frameborder="0"></iframe>
         </div>
         
     </div>
     <div id="outro">
-    {% if search_list!="klum" %}
-        <a href="{{ back2 }}">חזור</a>
-    {% endif %}
+    
     </div>
 </body>
 </html>

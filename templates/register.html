@@ -2,32 +2,33 @@
 
 <head>
     <title>כלבו</title>
-    <link rel="stylesheet" type="text/css" href="..\static\home.css">
+    <link rel="stylesheet" type="text/css" href="..\static\login.css">
     <link rel="shortcut icon" type="image/png" href="..\static\yotvata_logo.png"/>
 </head>
 
 <body>
-    <div align="center" id="intro">
-        <h1 id="header1">כלבו אונליין</h1>
-    </div>
     
-    <div align="center" id="main">
-        <h1>הרשמה</h1>
-        <p>כל השדות חובה!</p>
-        <form method="POST" action="/register_process" onsubmit="return confirm('אם כל הפרטים נכונים, אשר');">
-            <input type="text" name="user" placeholder="שם מלא" required>
-            <br>
-            <input type="password" name="password" placeholder="סיסמא" required>
-            <br>
-            <input type="email" name="email" placeholder="כתובת אימייל" required>
-            <br>
-            <input type="tel" name="tel" placeholder="טלפון נייד" required>
-            <br>
-            <input type="submit" value="הרשם">
-        </form>
-        <p>אם לאחר ההרשמה את/ה עדיין בדף זה, ההרשמה לא נעשתה כראוי <br>יש לנסות שנית</p>
+    <div class="login-page">
+        <div class="form">
+            <h1>Online כלבו</h1>
+            <h2 align="right">הרשמה</h2>
+            <p align="right">!כל השדות חובה</p>
+            <form class="login-form" method="POST" action="/register_process" onsubmit="return confirm('אם כל הפרטים נכונים, אשר');">
+                <input type="text" name="user" placeholder="שם מלא" required>
+                <br>
+                <input type="password" name="password" placeholder="סיסמא" required>
+                <br>
+                <input type="email" name="email" placeholder="כתובת אימייל" required>
+                <br>
+                <input type="tel" name="tel" placeholder="טלפון נייד" required>
+                <br>
+                <button type="submit">הרשם</button>
+            </form>
+            <p align="right">אם לאחר ההרשמה את/ה עדיין בדף זה, ההרשמה לא נעשתה כראוי <br>יש לנסות שנית</p>
 
-        <a href="/login">עמוד התחברות</a>
+            
+            <a href="/login">עמוד התחברות</a>
+        </div>
     </div>
 </body>
 </html>

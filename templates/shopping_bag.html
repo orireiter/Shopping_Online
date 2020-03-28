@@ -10,28 +10,28 @@
     <div id="shopping_bag_list">
         {% for x in leng %} 
         <form>
-            <button type="submit" name="add_item" value="{{ item_names[x] }},{{ username }}" formmethod="POST" formaction="http://127.0.0.1:5001/add_item">
+            <button type="submit" name="add_item" value="{{ item_names[x] }},{{ username }}" formmethod="POST" formaction="http://172.16.0.17:5001/add_item">
                 +
             </button>
-            <button type="submit" name="delete_item" value="{{ item_names[x] }},{{ username }}" formmethod="POST" formaction="http://127.0.0.1:5001/delete_item">
+            <button type="submit" name="delete_item" value="{{ item_names[x] }},{{ username }}" formmethod="POST" formaction="http://172.16.0.17:5001/delete_item">
                 -
             </button>
-            <button type="submit" name="delete_items" value="{{ item_names[x] }},{{ username }}" formmethod="POST" formaction="http://127.0.0.1:5001/delete_items">
+            <button type="submit" name="delete_items" value="{{ item_names[x] }},{{ username }}" formmethod="POST" formaction="http://172.16.0.17:5001/delete_items">
                 X
             </button>
         </form>
-        <p>{{  item_names[x] }}: {{ amount[x] }}</p>
+        <p>{{ amount[x] }}x  {{  item_names[x] }}</p>
         {% endfor %}
         <form action="/add_free_item" method="POST">
             <input type="text" name="item" placeholder="הכנס מוצר חופשי">
-            <button type="submit" name="user" value="{{ username }}">
+            <button id="add" type="submit" name="user" value="{{ username }}">
                 הוסף
             </button>
         </form>
     </div>
-    <div id="big_action" style="position: fixed;" >  
+    <div id="big_action" >  
         <form>
-            <button type="submit" formmethod="POST" formaction="http://127.0.0.1:5002/sender/{{ username }}">
+            <button id="order" type="submit" formmethod="POST" formaction="http://172.16.0.17:5002/sender/{{ username }}">
                 הזמן
             </button>
         </form>

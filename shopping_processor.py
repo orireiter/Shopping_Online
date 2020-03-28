@@ -149,7 +149,7 @@ def order_sender(username):
         
 
         try:
-            document.add_picture(r'C:\Users\Ori\Desktop\py_projects\flask\ColBo\static\barcoding\\' + key + '.jpeg', width=Cm(6))
+            document.add_picture(r'C:\ColBo\static\barcoding\\' + key + '.jpeg', width=Cm(6))
         except:
             pass
     ran = str(random.randint(1, 10000))

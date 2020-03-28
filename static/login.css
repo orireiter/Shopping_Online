@@ -1,0 +1,81 @@
+@import url(https://fonts.googleapis.com/css?family=Rubik&display=swap);
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 10px;
+  padding: 35px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+}
+.form h1 {
+  padding: 10px;
+}
+.form input {
+  font-family: "Rubik", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  text-align: right;
+  border-radius: 10px;
+}
+.form button, a {
+  font-family: "Rubik", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: rgb(60, 138, 62);
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.5 ease-in-out;
+  -moz-transition: all 0.5 ease-in-out;
+  transition: all 0.5 ease-in-out;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.reg {
+  font-family: "Rubik", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: rgb(60, 138, 62);
+  max-width: 25%;
+  border: 0;
+  padding: 10px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.5 ease-in-out;
+  -moz-transition: all 0.5 ease-in-out;
+  transition: all 0.5 ease-in-out;
+  cursor: pointer;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.form button:hover,.form button:active,.form button:focus, a:hover{
+  background: #43A047;
+}
+
+body {
+  background: #578b3b; /* fallback for old browsers */
+  background: -webkit-linear-gradient(right, #578b3b, rgba(89, 146, 56, 0.699));
+  background: -moz-linear-gradient(right, #4b7933, rgba(85, 139, 88, 0.699));
+  background: -o-linear-gradient(right, #578b3b, rgba(89, 146, 56, 0.699));
+  background: linear-gradient(to left, #4d7a34, rgba(85, 139, 88, 0.699));
+  font-family: "Rubik", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;      
+}

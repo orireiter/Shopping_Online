@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Rubik&display=swap);
+
 * {
     box-sizing: border-box;
     
@@ -5,16 +7,58 @@
 
 body {
     text-align: right;
-    background-color: cornflowerblue;
+    background: #578b3b; /* fallback for old browsers */
+    background: -webkit-linear-gradient(right, #578b3b, rgba(89, 146, 56, 0.699));
+    background: -moz-linear-gradient(right, #4b7933, rgba(85, 139, 88, 0.699));
+    background: -o-linear-gradient(right, #578b3b, rgba(89, 146, 56, 0.699));
+    background: linear-gradient(to left, #4d7a34, rgba(85, 139, 88, 0.699));
+    font-family: "Rubik", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;      
 }
 
 #intro {
-    background-color: gray;
+    transform: translate(100%);
+    background: #FFFFFF;
+    max-width: 33%;
+    margin: 0 auto 10px;
+    padding: 35px;
+    text-align: right;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 10px;
+}
+
+#intro input {
+    font-family: "Rubik", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    text-align: right;
+    border-radius: 10px;
+}
+#intro button {
+    font-family: "Rubik", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: rgb(60, 138, 62);
+    width: 25%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.5 ease-in-out;
+    -moz-transition: all 0.5 ease-in-out;
+    transition: all 0.5 ease-in-out;
+    cursor: pointer;
+    border-radius: 10px;
 }
 
 #main {
-    
-    border: 1px solid black;
     overflow: hidden; /* will contain if #first is longer than #second */
     max-width: 100%;
 }
@@ -22,26 +66,90 @@ body {
     max-width: 80%;
     min-width: 80%;
     float:right; /* add this */
-    border: 1px solid red;
+    
     position: relative;
     display: grid;
     grid-template-columns: auto auto auto auto;
+    position: relative;
+    z-index: 2;
+    background: #FFFFFF;
+    
+    margin: 0 auto 10px;
+    padding: 35px;
+    text-align: right;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 10px;
 }
 
-.item_icon_list {
-    max-width: 200px;
-    max-height: 200px;
+.list_obj {
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.075), 0 5px 5px 0 rgba(0, 0, 0, 0.082);
 }
-
+#intro button:hover {
+    background: #43A047;
+}
+#next {
+    max-width: 50%;
+    padding: 0px;
+    text-decoration: none;
+    margin-top: 15%;
+    font-size: 16px;
+}
+#back {
+    max-width: 50%;
+    padding: 0px;
+    text-decoration: none;
+    margin-top: 15%;
+    font-size: 16px; 
+    transform: translate(515%);  
+}
+#back2{
+    transform: translate(-195%);
+}
+.list_obj button:hover, #item_list a:hover {
+    background: #43A047;
+}
+#hello {
+    color: #FFFFFF;
+}
+.list_obj button, #item_list a {
+    font-family: "Rubik", sans-serif;
+    background: rgb(60, 138, 62);
+    color: #FFFFFF;
+    padding: 10px;
+    font-size: 14px;
+    -webkit-transition: all 0.5 ease-in-out;
+    -moz-transition: all 0.5 ease-in-out;
+    transition: all 0.5 ease-in-out;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+    outline: 0;
+    border: 0;
+}
 #shopping_bag {
     width: 19.7%;
-    border: 1px solid green;
+    
     overflow: auto; /* if you don't want #second to wrap below #first */
     float: left,; /* add this */
     position: fixed;
-    max-width: 19.7%;
-    height: 700px;
-    max-height: 701px;
+    max-width: 19%;
+    height: 90%;
+    max-height: 90%;
+    float:right; /* add this */
+    transform: translate(0,-40%);
+    z-index: 3;
+    background: #FFFFFF;
+    
+    margin: 0 auto 10px;
+
+    text-align: right;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 10px;
+
     
 }
 
@@ -52,13 +160,15 @@ body {
     grid-template-columns: auto auto auto;
 }
 
-.list_obj {
-    background-color: rgb(154, 180, 228);
-}
 
 iframe {
     width: 100%;
-    height: 690px;
+    height: 98.934%;
     max-width: 100%;
-    max-height: 701px;
+    
+}
+
+.item_price_list {
+
+    min-height: 20px;
 }

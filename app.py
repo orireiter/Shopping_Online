@@ -31,9 +31,10 @@ def home(username, page_num, id):
         next1 = "/"+str(id)+"/"+str(username)+"/"+str(int(page_num)+1)
         back1 = "/"+str(id)+"/"+str(username)+"/"+str(int(page_num)-1)
         print(next1)
+        yot = r"..\\..\\static\\yotvata_logo.png"
         return render_template("home.html",
          username=username, get_40=get_40, page_num=page_num, next1=next1,
-         back1=back1, id=id)
+         back1=back1, id=id, yot=yot)
 
 # central part
 # need to make the shopping bag and ability to add to it
@@ -122,12 +123,13 @@ def search(username, id):
         if search_list == "klum":
             return redirect(request.referrer)
         back2 = request.referrer
+        yot = r"..\\..\\static\\yotvata_logo.png"
         return render_template("search.html", 
-        search_list=search_list, username=username, back2=back2, query=query, id=id)
+        search_list=search_list, username=username,yot=yot, back2=back2, query=query, id=id)
     except:
         return redirect("/"+str(id)+"/"+str(username)+"/"+"1")
 
 # ----------------------------------------------------------#
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host='172.16.0.17')

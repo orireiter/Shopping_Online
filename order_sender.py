@@ -1,7 +1,7 @@
 # flask imports
 from flask import Flask, redirect, render_template, request
 # homemade imports
-import db_for_home, db_search, shopping_processor, barcode_maker
+import db_for_home, db_search, shopping_processor, barcode_maker, db_for_auth
 # general use imports
 import datetime, os, json, email, smtplib, ssl
 # email related
@@ -17,11 +17,21 @@ app = Flask(__name__)
 def order_page(username):
     
     doc, ran = shopping_processor.order_sender(username)
-
+    try: 
+        collection = db_for_auth.db_info()
+        db_obj = collection.find_one({"name": str(username)})
+        if db_obj == None:
+            return "error", 404
+        else:
+            email = db_obj['email']
+            print(email)
+    except:
+        return "error", 404    
+    
     # email
     gmail_user = 'basket4yotvata@gmail.com'
     gmail_password = 'Yt6357510'
-    receivers = 'turh058@gmail.com'
+    receivers = str(email)
     subject = f'{datetime.date.today()} הזמנה של: {username}'
     #-------------------#
 
@@ -66,8 +76,13 @@ def order_page(username):
     except:
         print("didnt work")
 
-    backk = request.referrer
-    return redirect(backk)
+    clean_json = open('.\orders\\'+str(username)+str(datetime.date.today())+'.json', 'w')
+    clean_json.write(r"{}")
+    clean_json.close()
 
+    backk = request.referrer
+    #return redirect(backk)
+    return render_template("done.html")
+    
 if __name__ == "__main__":
-    app.run(debug=True, port=5002)
+    app.run(debug=True,host='172.16.0.17', port=5002)

@@ -7,11 +7,13 @@
 </head>
 
 <body>
-    <div id="intro">
-        <p id="hello">שלום {{ username }}</p>
-        <div id="search_bar">
+    <p id="hello" style="color: white;">שלום {{ username }}</p>
+    <div align="right" id="intro">
+        
+        <div  id="search_bar">
+            
             <form action="/search/{{ id }}/{{ username }}" method="POST">
-                <input type="text" name="query" placeholder="חפש..."> <input type="submit" value="חפש" id="submit">
+                <input type="search" name="query" placeholder="...חפש/י"> <button type="submit" value="חפש" id="submit">חיפוש</button>
             </form>
         </div>
     </div>
@@ -20,24 +22,30 @@
         
         <div id="item_list">
         {% for item in get_40 %}
-            <div class="list_obj" style="border: 1px solid black">
-                <img class="item_icon_list" src="..\..\static\COLBO_IMG\{{ item['Barcode'] }}.png" alt="תמונה לא זמינה כרגע">    
+            <div class="list_obj">
+                <img align="center" class="item_icon_list" src="..\..\static\COLBO_IMG\{{ item['Barcode'] }}.png" onerror="this.src='{{ yot }}';" width="100px" height="100px">    
                 <p class="item_name_list">{{ item['Name'] }}</p>
                 <p class="item_price_list">{{ item['Price'] }}</p>
                 <form>
-                    <button type="submit" name="add_item" value="{{ item['Name'] }},{{ username }}" formmethod="POST" formaction="http://127.0.0.1:5001/add_item" formtarget="side">
+                    <button type="submit" name="add_item" value="{{ item['Name'] }},{{ username }}" formmethod="POST" formaction="http://172.16.0.17:5001/add_item" formtarget="side">
                         הוסף
                     </button>
                 </form>
             </div>
         {% endfor %}
+            <a id="next" href="{{ next1 }}">
+                הבא
+            </a>
+            <a id="back" href="{{ back1 }}">
+                הקודם
+            </a>
         </div>
 
 
         
         <div id="shopping_bag">
             
-            <iframe name="side" src="http://127.0.0.1:5001/shop/{{ username }}" frameborder="0"></iframe>
+            <iframe name="side" src="http://172.16.0.17:5001/shop/{{ username }}" frameborder="0"></iframe>
             <!--
                 {% for x in range(40) %} 
                 <p>פה מוצג סל הקניות</p>
@@ -46,14 +54,6 @@
         
         </div>
         
-    </div>
-    <div id="outro">
-        <a href="{{ next1 }}">
-            הבא
-        </a>
-        <a href="{{ back1 }}">
-            הקודם
-        </a>
     </div>
 </body>
 </html>

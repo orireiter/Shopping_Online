@@ -2,25 +2,25 @@
 
 <head>
     <title>כלבו</title>
-    <link rel="stylesheet" type="text/css" href="..\static\home.css">
+    <link rel="stylesheet" type="text/css" href="..\static\login.css">
     <link rel="shortcut icon" type="image/png" href="..\static\yotvata_logo.png"/>
 </head>
 
 <body>
-    <div align="center" id="intro">
-        <h1 id="header1">כלבו אונליין</h1>
-    </div>
-    
-    <div align="center" id="main">
-        <p>פה יש את כל החלק של ההתחברות</p>
-        <form method="POST">
-            <input type="text" name="user" placeholder="שם מלא">
-            <br>
-            <input type="password" name="password" placeholder="סיסמא">
-            <br>
-            <input type="submit" value="התחבר">
-        </form>
-        <a href="/register">הרשמה</a>
-    </div>
+    <div class="login-page">
+        
+        <div class="form">
+            <h1>Online כלבו</h1>
+            <form class="login-form" method="POST">
+                <input type="text" name="user" placeholder="שם מלא"/>
+                <input type="password" name="password" placeholder="סיסמא"/>
+                <button type="submit">התחבר/י</button>
+            <p></p>
+            <p></p>
+            
+            </form>
+            <a class="reg" href="/register">הרשמה</a>
+        </div>
+      </div>
 </body>
 </html>
