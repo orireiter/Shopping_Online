@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Rubik&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Comic+Neue&display=swap);
 
 * {
     box-sizing: border-box;
@@ -40,7 +41,15 @@ body {
     font-size: 14px;
     text-align: right;
     border-radius: 10px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    
 }
+#intro input:focus{
+    background-color: #b8b8b8;
+}
+
 #intro button {
     font-family: "Rubik", sans-serif;
     text-transform: uppercase;
@@ -51,11 +60,15 @@ body {
     padding: 15px;
     color: #FFFFFF;
     font-size: 14px;
-    -webkit-transition: all 0.5 ease-in-out;
-    -moz-transition: all 0.5 ease-in-out;
-    transition: all 0.5 ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     cursor: pointer;
     border-radius: 10px;
+}
+#search_bar {
+    display: inline;
+    padding: 0;
 }
 
 #main {
@@ -63,8 +76,7 @@ body {
     max-width: 100%;
 }
 #item_list {
-    max-width: 80%;
-    min-width: 80%;
+    width: 80%;
     float:right; /* add this */
     
     position: relative;
@@ -83,10 +95,18 @@ body {
 
 .list_obj {
     background-color: #f2f2f2;
-    padding: 10px;
-    margin: 10px;
+    padding: 10%;
+    margin: 5%;
     border-radius: 10px;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.075), 0 5px 5px 0 rgba(0, 0, 0, 0.082);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.list_obj:hover{
+    background-color: #b8b8b8;
 }
 #intro button:hover {
     background: #43A047;
@@ -121,9 +141,9 @@ body {
     color: #FFFFFF;
     padding: 10px;
     font-size: 14px;
-    -webkit-transition: all 0.5 ease-in-out;
-    -moz-transition: all 0.5 ease-in-out;
-    transition: all 0.5 ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     cursor: pointer;
     border-radius: 10px;
     text-align: center;
@@ -134,7 +154,7 @@ body {
     width: 19.7%;
     
     overflow: auto; /* if you don't want #second to wrap below #first */
-    float: left,; /* add this */
+    float: left; /* add this */
     position: fixed;
     max-width: 19%;
     height: 90%;
@@ -171,4 +191,7 @@ iframe {
 .item_price_list {
 
     min-height: 20px;
+}
+#submit {
+    display: inline;
 }

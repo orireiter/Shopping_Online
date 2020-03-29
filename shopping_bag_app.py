@@ -94,4 +94,4 @@ def delete_items():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host='172.16.0.17',port=5001)
+    app.run(debug=False, host='172.16.0.17',port=5001)

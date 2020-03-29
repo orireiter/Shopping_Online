@@ -85,4 +85,4 @@ def order_page(username):
     return render_template("done.html")
     
 if __name__ == "__main__":
-    app.run(debug=True,host='172.16.0.17', port=5002)
+    app.run(debug=False,host='172.16.0.17', port=5002)

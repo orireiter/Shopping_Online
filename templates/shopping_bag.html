@@ -9,32 +9,42 @@
 <body>
     <div id="shopping_bag_list">
         {% for x in leng %} 
-        <form>
-            <button type="submit" name="add_item" value="{{ item_names[x] }},{{ username }}" formmethod="POST" formaction="http://172.16.0.17:5001/add_item">
-                +
-            </button>
-            <button type="submit" name="delete_item" value="{{ item_names[x] }},{{ username }}" formmethod="POST" formaction="http://172.16.0.17:5001/delete_item">
-                -
-            </button>
-            <button type="submit" name="delete_items" value="{{ item_names[x] }},{{ username }}" formmethod="POST" formaction="http://172.16.0.17:5001/delete_items">
-                X
-            </button>
-        </form>
-        <p>{{ amount[x] }}x  {{  item_names[x] }}</p>
+        <div class="1">
+            <form class="reg">
+                <button class="add_one" type="submit" name="add_item" value="{{ item_names[x] }},{{ username }}" formmethod="POST" formaction="http://172.16.0.17:5001/add_item">
+                    +
+                </button>
+                <button class="less_one" type="submit" name="delete_item" value="{{ item_names[x] }},{{ username }}" formmethod="POST" formaction="http://172.16.0.17:5001/delete_item">
+                    -
+                </button>
+                <button class="less_all" type="submit" name="delete_items" value="{{ item_names[x] }},{{ username }}" formmethod="POST" formaction="http://172.16.0.17:5001/delete_items">
+                    x
+                </button>
+            </form>
+        </div>
+        <p class="items">{{ amount[x] }}x  {{  item_names[x] }}</p>
         {% endfor %}
-        <form action="/add_free_item" method="POST">
-            <input type="text" name="item" placeholder="הכנס מוצר חופשי">
-            <button id="add" type="submit" name="user" value="{{ username }}">
-                הוסף
-            </button>
-        </form>
+        <br>
+        <div class="2">
+            <form style="z-index: 2;">
+                <input type="text" name="item" placeholder="הכנס מוצר חופשי" required>
+                <button type="submit" id="add" formmethod="POST" formaction="/add_free_item" name="user" value="{{ username }}">
+                    הוספה
+                </button>
+            </form>
+        </div>
+        <br>
+        <br>
+        <div class="3">
+            <div id="big_action" >  
+                <form>
+                    <button id="order" type="submit" formmethod="POST" formaction="http://172.16.0.17:5002/sender/{{ username }}">
+                        הזמנה
+                    </button>
+                </form>
+            </div>
+        </div>
     </div>
-    <div id="big_action" >  
-        <form>
-            <button id="order" type="submit" formmethod="POST" formaction="http://172.16.0.17:5002/sender/{{ username }}">
-                הזמן
-            </button>
-        </form>
-    </div>
+    
 </body>
 </html>

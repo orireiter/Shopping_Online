@@ -132,4 +132,4 @@ def search(username, id):
 # ----------------------------------------------------------#
 
 if __name__ == "__main__":
-    app.run(debug=True, host='172.16.0.17')
+    app.run(debug=False, host='172.16.0.17')
