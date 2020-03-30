@@ -31,7 +31,16 @@
   font-size: 14px;
   text-align: right;
   border-radius: 10px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  
 }
+
+.form input:focus {
+  background-color: #929292;
+  color: black;
+} 
 .form button, a {
   font-family: "Rubik", sans-serif;
   text-transform: uppercase;
@@ -42,9 +51,9 @@
   padding: 15px;
   color: #FFFFFF;
   font-size: 14px;
-  -webkit-transition: all 0.5 ease-in-out;
-  -moz-transition: all 0.5 ease-in-out;
-  transition: all 0.5 ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   cursor: pointer;
   border-radius: 10px;
 }
@@ -58,9 +67,9 @@
   padding: 10px;
   color: #FFFFFF;
   font-size: 14px;
-  -webkit-transition: all 0.5 ease-in-out;
-  -moz-transition: all 0.5 ease-in-out;
-  transition: all 0.5 ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   cursor: pointer;
   border-radius: 10px;
   text-decoration: none;
@@ -78,4 +87,8 @@ body {
   font-family: "Rubik", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;      
+}
+
+a {
+  text-decoration: none;
 }

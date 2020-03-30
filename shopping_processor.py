@@ -137,13 +137,13 @@ def order_sender(username):
 
 
     # adding the information
-    header =  str(datetime.date.today()) + " מזמין: " + str(username)
+    header =  str(datetime.date.today()) + " הזמנה " + str(username)
     document.add_heading(header, 0)
     for key in new_key_list:
         # adding info and applying bigger font
         # p = document.add_paragraph( key + " כמות: " + value_list[new_key_list.index(key)], style='List Bullet')
         p = document.add_paragraph('', style='List Bullet')
-        run = p.add_run(key + " כמות: " + value_list[new_key_list.index(key)])
+        run = p.add_run(key + " כמות=" + value_list[new_key_list.index(key)])
         font = run.font
         font.size = Pt(16)
         

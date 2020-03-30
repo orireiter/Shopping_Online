@@ -41,8 +41,9 @@ def order_page(username):
 
     raw_mail = MIMEMultipart()
     raw_mail["From"] = gmail_user
-    raw_mail["To"] = receivers
+    raw_mail["To"] = 'ori.reiter@gmail.com'
     raw_mail["Subject"] = f'{subject}'
+    raw_mail["CC"] = receivers
 
     
     # Open docx file in binary mode
