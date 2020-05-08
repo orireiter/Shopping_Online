@@ -21,8 +21,9 @@
         <div id="item_list">
         {% for item in search_list %}
             <div class="list_obj">
-                <img class="item_icon_list" src="..\..\static\COLBO_IMG\{{ item['Barcode'] }}.png" onerror="this.src='{{ yot }}';" width="100px" height="100px">    
+                <img class="item_icon_list" src="..\..\static\item_IMG\{{ item['Barcode'] }}.png" onerror="this.src='{{ yot }}';" width="100px" height="100px">    
                 <p class="item_name_list">{{ item['Name'] }}</p>
+                <br>
                 <p class="item_price_list">{{ item['Price'] }}</p>
                 <form>
                     <button type="submit" name="add_item" value="{{ item['Name'] }},{{ username }}" formmethod="POST" formaction="http://{{ip}}:5001/add_item" formtarget="side">
@@ -34,13 +35,31 @@
             
         </div>
 
-        <div id="shopping_bag">
+        <div id="shopping_bag" class="shopping_bag">
             <iframe name="side" src="http://{{ip}}:5001/shop/{{ username }}" frameborder="0"></iframe>
         </div>
         
     </div>
     <div id="exit">
+        <a href="javascript:void(0);" id="mob_bag" onclick="myFunction()">My Bag</a>
         <a href="/login">יציאה</a>
     </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("shopping_bag");
+            if (x.className === "shopping_bag") {
+                x.className += " responsive";
+            } else {
+                x.className = "shopping_bag";
+            }
+            var y = document.getElementById("mob_bag");
+            if (y.innerHTML === 'My Bag') {
+                y.innerHTML = 'X';
+            }
+            else {
+                y.innerHTML = 'My Bag';
+            }
+        }
+    </script>
 </body>
 </html>
