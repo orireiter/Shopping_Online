@@ -11,14 +11,14 @@
         {% for x in leng %} 
         <div class="one">
             <form class="reg">
-                <button class="add_one" type="submit" name="add_item" value="{{ item_names[x] }},{{ username }}" formmethod="POST" formaction="http://172.16.0.17:5001/add_item">
-                    +
+                <button class="less_all" type="submit" name="delete_items" value="{{ item_names[x] }},{{ username }}" formmethod="POST" formaction="http://{{ip}}:5001/delete_items">
+                    x
                 </button>
-                <button class="less_one" type="submit" name="delete_item" value="{{ item_names[x] }},{{ username }}" formmethod="POST" formaction="http://172.16.0.17:5001/delete_item">
+                <button class="less_one" type="submit" name="delete_item" value="{{ item_names[x] }},{{ username }}" formmethod="POST" formaction="http://{{ip}}:5001/delete_item">
                     -
                 </button>
-                <button class="less_all" type="submit" name="delete_items" value="{{ item_names[x] }},{{ username }}" formmethod="POST" formaction="http://172.16.0.17:5001/delete_items">
-                    x
+                <button class="add_one" type="submit" name="add_item" value="{{ item_names[x] }},{{ username }}" formmethod="POST" formaction="http://{{ip}}:5001/add_item">
+                    +
                 </button>
             </form>
         </div>
@@ -27,9 +27,9 @@
         <br>
         <div class="2">
             <form style="z-index: 2;">
-                <input type="text" name="item" placeholder="הכנס מוצר חופשי" required>
+                <input type="text" name="item" placeholder="free writing item" required>
                 <button type="submit" id="add" formmethod="POST" formaction="/add_free_item" name="user" value="{{ username }}">
-                    הוספה
+                    add
                 </button>
             </form>
         </div>
@@ -38,8 +38,8 @@
         <div class="3">
             <div id="big_action" >  
                 <form>
-                    <button id="order" type="submit" formmethod="POST" formaction="http://172.16.0.17:5002/sender/{{ username }}">
-                        הזמנה
+                    <button id="order" type="submit" formmethod="POST" formaction="http://{{ip}}:5002/sender/{{ username }}">
+                        order
                     </button>
                 </form>
             </div>

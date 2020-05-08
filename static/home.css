@@ -6,8 +6,12 @@
     
 }
 
+html {
+    font-size: 100%;
+}
+
 body {
-    text-align: right;
+    
     background: #578b3b; /* fallback for old browsers */
     background: -webkit-linear-gradient(right, #578b3b, rgba(89, 146, 56, 0.699));
     background: -moz-linear-gradient(right, #4b7933, rgba(85, 139, 88, 0.699));
@@ -18,16 +22,29 @@ body {
     -moz-osx-font-smoothing: grayscale;      
 }
 
+/* -------------------------------------------top section----------------------------------------------- */
+
+#hello {
+    color: #FFFFFF;
+    font-size: 1.2em;
+}
+
 #intro {
-    transform: translate(100%);
+    /* transform: translate(-100%); */
     background: #FFFFFF;
     max-width: 33%;
-    margin: 0 auto 10px;
-    padding: 35px;
-    text-align: right;
+    margin-bottom: 1% ;
+    padding: 3em;
+    padding-bottom: 2em;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-    border-radius: 10px;
+    border-radius: 1em;
 }
+
+#search_bar {
+    display: inline;
+    padding: 0;
+}
+
 
 #intro input {
     font-family: "Rubik", sans-serif;
@@ -35,12 +52,12 @@ body {
     background: #f2f2f2;
     width: 100%;
     border: 0;
-    margin: 0 0 15px;
-    padding: 15px;
+    margin-bottom: 2em;
+    padding: 1em;
     box-sizing: border-box;
-    font-size: 14px;
-    text-align: right;
-    border-radius: 10px;
+    font-size: 1em;
+    
+    border-radius: 0.66666em;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
@@ -50,26 +67,42 @@ body {
     background-color: #b8b8b8;
 }
 
+
+#submit {
+    display: inline;
+}
+
 #intro button {
     font-family: "Rubik", sans-serif;
-    text-transform: uppercase;
+    text-align: center;
     outline: 0;
     background: rgb(60, 138, 62);
     width: 25%;
     border: 0;
-    padding: 15px;
+    padding: 1em;
+    padding-left: 0.1em;
     color: #FFFFFF;
-    font-size: 14px;
+    font-size: 1em;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 0.66666em;
+    min-width: 54px;
 }
-#search_bar {
-    display: inline;
-    padding: 0;
+#intro button:hover {
+    background: #43A047;
 }
+
+/* -----only on search page------ */
+#back2{
+    position: relative;
+    left: 50%;
+    
+    /*transform: translate(197.5%); */
+}
+
+/* -------------------------------------------mid-left section------------------------------------------ */
 
 #main {
     overflow: hidden; /* will contain if #first is longer than #second */
@@ -77,7 +110,7 @@ body {
 }
 #item_list {
     width: 80%;
-    float:right; /* add this */
+    float:left; /* add this */
     
     position: relative;
     display: grid;
@@ -86,75 +119,88 @@ body {
     z-index: 2;
     background: #FFFFFF;
     
-    margin: 0 auto 10px;
-    padding: 35px;
-    text-align: right;
+    margin-bottom: 0.5em;
+    padding-top: 2.2em;
+    padding-bottom: 2.2em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-    border-radius: 10px;
+    border-radius: 0.7em;
 }
 
 .list_obj {
     background-color: #f2f2f2;
     padding: 10%;
     margin: 5%;
-    border-radius: 10px;
+    border-radius: 0.7em;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.075), 0 5px 5px 0 rgba(0, 0, 0, 0.082);
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     
 }
-
 .list_obj:hover{
     background-color: #b8b8b8;
 }
-#intro button:hover {
+
+.list_obj button, #item_list a {
+    font-family: "Rubik", sans-serif;
+    background: rgb(60, 138, 62);
+    color: #FFFFFF;
+    padding: 0.7em;
+    font-size: 1em;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    border-radius: 0.7em;
+    text-align: center;
+    outline: 0;
+    border: 0;
+}
+.list_obj button:hover, #item_list a:hover {
     background: #43A047;
 }
-#next {
-    max-width: 50%;
-    padding: 0px;
-    text-decoration: none;
-    margin-top: 15%;
-    font-size: 16px;
+
+.item_name_list{
+    min-height: 20px;
+    max-height: 20px;
+    
 }
+.item_icon_list {
+    border-radius: 10%;
+}
+.item_price_list {
+
+    min-height: 20px;
+}
+
 #back {
     max-width: 50%;
     padding: 0px;
     text-decoration: none;
     margin-top: 15%;
-    font-size: 16px; 
-    transform: translate(515%);  
+    font-size: 1em; 
+    transform: translate(10%);
+      
 }
-#back2{
-    transform: translate(-195%);
+
+#next {
+    max-width: 50%;
+    padding: 0px;
+    text-decoration: none;
+    margin-top: 15%;
+    font-size: 1em;
+    transform: translate(495%);
 }
-.list_obj button:hover, #item_list a:hover {
-    background: #43A047;
-}
-#hello {
-    color: #FFFFFF;
-}
-.list_obj button, #item_list a {
-    font-family: "Rubik", sans-serif;
-    background: rgb(60, 138, 62);
-    color: #FFFFFF;
-    padding: 10px;
-    font-size: 14px;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-    border-radius: 10px;
-    text-align: center;
-    outline: 0;
-    border: 0;
-}
+
+/* ---------------------------------------------top right section------------------------------------------- */
+
 #shopping_bag {
     width: 19.7%;
     
     overflow: auto; /* if you don't want #second to wrap below #first */
-    float: left; /* add this */
+    float: right; /* add this */
     position: fixed;
     max-width: 19%;
     height: 80%;
@@ -164,28 +210,38 @@ body {
     /* try tranform -15% for mobile */
     z-index: 3;
     background: #FFFFFF;
-    left: 0;
+    right: 0;
     top: 0;
-    transform: translate(3%,2%);
-    margin: 0 auto 10px;
+    transform: translate(-3%,2%);
+    
 
-    text-align: right;
+    
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-    border-radius: 10px;
+    border-radius: 0.666663em;
 
     
 }
 
+
+iframe {
+    width: 100%;
+    height: 98.934%;
+    max-width: 100%;
+    
+}
+
+/* ---------------------------------------------top bottom section----------------------------------------- */
+
 #exit{
     position: fixed;
     bottom: 0;
-    left: 0;
+    right: 0;
     font-family: "Rubik", sans-serif;
     text-align: center;
     
     font-weight: bolder;
     width: 8%;
-    height: 7%;    
+    height: 4%;    
 
 }
 
@@ -199,9 +255,13 @@ body {
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    border-radius: 15px;
+    border-radius: 0.4em;
     color: white;
-    font-size: 22px;
+    font-size: 1.3333em;
+    
+    min-height: 25px;
+    min-width: 75px;
+    max-width: 100px;
 }
 
 #exit a:hover{
@@ -209,31 +269,4 @@ body {
 }
 #exit a:visited{
     color: rgb(255, 255, 255);
-}
-
-#shopping_bag_list {
-    
-    overflow: auto; /* if you don't want #second to wrap below #first */
-    display: grid;
-    grid-template-columns: auto auto auto;
-}
-
-
-iframe {
-    width: 100%;
-    height: 98.934%;
-    max-width: 100%;
-    
-}
-
-.item_price_list {
-
-    min-height: 20px;
-}
-#submit {
-    display: inline;
-}
-
-.item_icon_list {
-    border-radius: 10%;
 }

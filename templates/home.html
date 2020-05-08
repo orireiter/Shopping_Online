@@ -7,13 +7,13 @@
 </head>
 
 <body>
-    <p id="hello" style="color: white;">שלום {{ username }}</p>
-    <div align="right" id="intro">
+    <p id="hello" style="color: white;">Hello {{ username }},</p>
+    <div align="left" id="intro">
         
         <div  id="search_bar">
             
             <form action="/search/{{ id }}/{{ username }}" method="POST">
-                <input type="search" name="query" placeholder="...חפש/י"> <button type="submit" value="חפש" id="submit">חיפוש</button>
+                <input type="search" name="query" placeholder="search..."> <button type="submit" value="search" id="submit">search</button>
             </form>
         </div>
     </div>
@@ -27,17 +27,17 @@
                 <p class="item_name_list">{{ item['Name'] }}</p>
                 <p class="item_price_list">{{ item['Price'] }}</p>
                 <form>
-                    <button type="submit" name="add_item" value="{{ item['Name'] }},{{ username }}" formmethod="POST" formaction="http://172.16.0.17:5001/add_item" formtarget="side">
-                        הוספה
+                    <button type="submit" name="add_item" value="{{ item['Name'] }},{{ username }}" formmethod="POST" formaction="http://{{ip}}:5001/add_item" formtarget="side">
+                        add
                     </button>
                 </form>
             </div>
         {% endfor %}
-            <a id="next" href="{{ next1 }}">
-                הבא
-            </a>
             <a id="back" href="{{ back1 }}">
-                הקודם
+                previous
+            </a>
+            <a id="next" href="{{ next1 }}">
+                next
             </a>
         </div>
 
@@ -45,12 +45,12 @@
         
         <div id="shopping_bag">
             
-            <iframe name="side" src="http://172.16.0.17:5001/shop/{{ username }}" frameborder="0"></iframe>
+            <iframe name="side" src="http://{{ip}}:5001/shop/{{ username }}" frameborder="0"></iframe>
                       
             
         </div>
         <div id="exit">
-            <a href="/login">יציאה</a>
+            <a href="/login">exit</a>
         </div>
     </div>
 </body>

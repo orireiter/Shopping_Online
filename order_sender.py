@@ -3,7 +3,7 @@ from flask import Flask, redirect, render_template, request
 # homemade imports
 import db_for_home, db_search, shopping_processor, barcode_maker, db_for_auth
 # general use imports
-import datetime, os, json, email, smtplib, ssl
+import datetime, os, json, email, smtplib, ssl, configparser
 # email related
 from email import encoders
 from email.mime.base import MIMEBase
@@ -11,6 +11,21 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
 app = Flask(__name__)
+
+
+#------------------------------------------------------------------#
+# PARSER related
+
+# creating a parser for a config file for better use later on
+# it takes as an argument to parameter youre looking for
+# and retrieves the variable in it
+def get_config(parameter):
+    parser = configparser.RawConfigParser()
+    config_path = r".\app.config"
+    parser.read(config_path)
+    return parser.get('app-config', str(parameter))
+
+# -----------------------------------------------------------#
 
 
 @app.route("/sender/<username>", methods=['POST'])
@@ -29,10 +44,12 @@ def order_page(username):
         return "error", 404    
     
     # email
-    gmail_user = 'basket4yotvata@gmail.com'
-    gmail_password = 'Yt6357510'
+    # you need to make sure less secure apps can use it!!!
+    gmail_user = str(get_config("owner_email"))
+    gmail_password = str(get_config("owner_email_pass"))
     receivers = str(email)
-    subject = f'{datetime.date.today()} הזמנה של: {username}'
+    
+    subject = f'{datetime.date.today()} order of: {username}'
     #-------------------#
 
 
@@ -41,9 +58,9 @@ def order_page(username):
 
     raw_mail = MIMEMultipart()
     raw_mail["From"] = gmail_user
-    raw_mail["To"] = 'ori.reiter@gmail.com'
+    raw_mail["To"] = f'{receivers}, {gmail_user}'
     raw_mail["Subject"] = f'{subject}'
-    raw_mail["CC"] = receivers
+    #raw_mail["CC"] = receivers
 
     
     # Open docx file in binary mode
@@ -71,7 +88,8 @@ def order_page(username):
         mail_server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
         mail_server.ehlo()
         mail_server.login(user=gmail_user, password=gmail_password)
-        mail_server.sendmail(from_addr=gmail_user, to_addrs=receivers, msg=ready_mail)
+        mail_server.sendmail(from_addr=gmail_user, to_addrs=receivers , msg=ready_mail)
+        mail_server.sendmail(from_addr=gmail_user, to_addrs=gmail_user , msg=ready_mail)
         mail_server.close()
         print('mail sent')
     except:
@@ -86,4 +104,6 @@ def order_page(username):
     return render_template("done.html")
     
 if __name__ == "__main__":
-    app.run(debug=False,host='172.16.0.17', port=5002)
+    host_add = get_config("host")
+
+    app.run(debug=False,host=host_add , port=5002)

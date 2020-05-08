@@ -3,7 +3,7 @@ from flask import Flask, redirect, render_template, request
 # homemade imports
 import db_for_home, db_search, shopping_processor, barcode_maker
 # general use imports
-import datetime, os, json, email, smtplib, ssl
+import datetime, os, json, email, smtplib, ssl, configparser
 # email related
 from email import encoders
 from email.mime.base import MIMEBase
@@ -15,6 +15,21 @@ from email.mime.text import MIMEText
 app = Flask(__name__)
 
 
+#------------------------------------------------------------------#
+# PARSER related
+
+# creating a parser for a config file for better use later on
+# it takes as an argument to parameter youre looking for
+# and retrieves the variable in it
+def get_config(parameter):
+    parser = configparser.RawConfigParser()
+    config_path = r".\app.config"
+    parser.read(config_path)
+    return parser.get('app-config', str(parameter))
+
+# -----------------------------------------------------------#
+
+
 @app.route("/shop/<username>")
 def shopping_bag(username):
     amount, item_names = shopping_processor.load_order(username=username)
@@ -23,9 +38,9 @@ def shopping_bag(username):
         item_names = ''
 
     length_of_list = range(len(amount))
-    
+    ip = get_config("host")
     return render_template("shopping_bag.html",
-    username=username, amount=amount, item_names=item_names, leng=length_of_list)
+    username=username, amount=amount, item_names=item_names, leng=length_of_list, ip=ip)
 
 
 
@@ -94,4 +109,6 @@ def delete_items():
 
 
 if __name__ == "__main__":
-    app.run(debug=False, host='172.16.0.17',port=5001)
+    host_add = get_config("host")
+    
+    app.run(debug=True,host=host_add ,port=5001)

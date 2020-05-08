@@ -7,13 +7,12 @@
 </head>
 
 <body>
-    <p id="hello">שלום {{ username }}, חיפשת {{ query }}</p>
+    <p id="hello">Hello {{ username }}, you searched for {{ query }}</p>
     <div id="intro">
         <div id="search_bar">
             <form action="/search/{{ id }}/{{ username }}" method="POST">
-                <input type="search" name="query" placeholder="חפש/י"> 
-                <button id="back2" href="{{ back2 }}">חזור</button>
-                <button type="submit" id="submit">חיפוש</button>
+                <input type="search" name="query" placeholder="search..."> 
+                <button type="submit" id="submit">search</button><button id="back2" href="{{ back2 }}">back</button>
             </form>
         </div>
     </div>
@@ -26,8 +25,8 @@
                 <p class="item_name_list">{{ item['Name'] }}</p>
                 <p class="item_price_list">{{ item['Price'] }}</p>
                 <form>
-                    <button type="submit" name="add_item" value="{{ item['Name'] }},{{ username }}" formmethod="POST" formaction="http://172.16.0.17:5001/add_item" formtarget="side">
-                        הוספה
+                    <button type="submit" name="add_item" value="{{ item['Name'] }},{{ username }}" formmethod="POST" formaction="http://{{ip}}:5001/add_item" formtarget="side">
+                        add
                     </button>
                 </form>
             </div>
@@ -36,7 +35,7 @@
         </div>
 
         <div id="shopping_bag">
-            <iframe name="side" src="http://172.16.0.17:5001/shop/{{ username }}" frameborder="0"></iframe>
+            <iframe name="side" src="http://{{ip}}:5001/shop/{{ username }}" frameborder="0"></iframe>
         </div>
         
     </div>

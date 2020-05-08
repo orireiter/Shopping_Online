@@ -1,14 +1,31 @@
-import pymongo
+import pymongo, configparser
 from pymongo import MongoClient
 
 
 global client
 client = MongoClient()
 
-def db_info():
-    db = client['COLBO_DB_TEST']
 
-    collection = db['users']
+#------------------------------------------------------------------#
+# PARSER related
+
+# creating a parser for a config file for better use later on
+# it takes as an argument to parameter youre looking for
+# and retrieves the variable in it
+def get_config(parameter):
+    parser = configparser.RawConfigParser()
+    config_path = r".\app.config"
+    parser.read(config_path)
+    return parser.get('app-config', str(parameter))
+
+# -----------------------------------------------------------#
+
+def db_info():
+    db = get_config("db")
+    db = client[db]
+
+    collection = get_config("user_col")
+    collection = db[collection]
     
     return collection
 

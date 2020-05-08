@@ -1,7 +1,22 @@
 from flask import Flask, redirect, render_template, request
 import db_for_home, db_search, db_for_auth, db_url_check
+import configparser
+
 
 app = Flask(__name__)
+
+
+#------------------------------------------------------------------#
+# PARSER related
+
+# creating a parser for a config file for better use later on
+# it takes as an argument to parameter youre looking for
+# and retrieves the variable in it
+def get_config(parameter):
+    parser = configparser.RawConfigParser()
+    config_path = r".\app.config"
+    parser.read(config_path)
+    return parser.get('app-config', str(parameter))
 
 # -----------------------------------------------------------#
 
@@ -21,6 +36,7 @@ def home(username, page_num, id):
     if authenticate != True :
         return redirect("/login")
     try:
+        ip = get_config("host")
         get_40 = db_for_home.show_40(page_num=page_num)
     except:
         return redirect("/"+str(id)+"/"+username+"/1")
@@ -34,11 +50,10 @@ def home(username, page_num, id):
         yot = r"..\\..\\static\\yotvata_logo.png"
         return render_template("home.html",
          username=username, get_40=get_40, page_num=page_num, next1=next1,
-         back1=back1, id=id, yot=yot)
+         back1=back1, id=id, yot=yot, ip=ip)
 
 # central part
-# need to make the shopping bag and ability to add to it
-# jumping to certain page
+
 # ability to choose how much of each object to add
 # check out option
 
@@ -51,8 +66,11 @@ def login():
         print(user)
         password = str(request.form["password"])
         print(password)
-    
-        answer, id  = db_for_auth.login(username=user, password=password)
+        try:
+            user1 = user.replace('"',"''")
+        except:
+            pass
+        answer, id  = db_for_auth.login(username=user1, password=password)
     except:
         print("no answer fromm db")
         return render_template("login.html")
@@ -62,10 +80,10 @@ def login():
         return render_template("login.html")
     else:
         print('login good')
-        home = "/"+str(id)+"/"+str(user)+"/1"
+        home = "/"+str(id)+"/"+str(user1)+"/1"
         return redirect(home)
 
-# the login page, requires work, need to add the users to db 
+# the login page
 # and retrieve their pass to validate, and not let passing through
 # straight to the shopping part
 
@@ -101,6 +119,7 @@ def register_proccess():
     if len(user) == user.count(" ") or len(password) == password.count(" ") or len(email) == " " or len(tel) == tel.count(" "):
         return redirect(backos)
     
+    
     registered = db_for_auth.register(username=user,password=password,email=email,tel=tel)
     if registered == False:
         return redirect(backos)
@@ -117,6 +136,7 @@ def search(username, id):
         return redirect("/login")
     
     try:
+        ip = get_config("host")
         query = str(request.form["query"])
         search_list = db_search.search(query)
         
@@ -125,11 +145,13 @@ def search(username, id):
         back2 = request.referrer
         yot = r"..\\..\\static\\yotvata_logo.png"
         return render_template("search.html", 
-        search_list=search_list, username=username,yot=yot, back2=back2, query=query, id=id)
+        search_list=search_list, username=username,yot=yot, back2=back2, query=query, id=id, ip=ip)
     except:
         return redirect("/"+str(id)+"/"+str(username)+"/"+"1")
 
 # ----------------------------------------------------------#
 
 if __name__ == "__main__":
-    app.run(debug=False, host='172.16.0.17')
+    host_add = get_config("host")
+    
+    app.run(debug=True, host=host_add)
