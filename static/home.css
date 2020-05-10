@@ -111,6 +111,21 @@ body {
     overflow: hidden; /* will contain if #first is longer than #second */
     max-width: 100%;
 }
+
+
+.center1 {
+    width: 100%;
+    background: #FFFFFF;
+    
+    margin-bottom: 0.5em;
+    padding-top: 2.2em;
+    padding-bottom: 2.8em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 0.7em;
+    
+}
 #item_list {
     width: 100%;
     float:left; /* add this */
@@ -122,13 +137,7 @@ body {
     z-index: 2;
     background: #FFFFFF;
     
-    margin-bottom: 0.5em;
-    padding-top: 2.2em;
-    padding-bottom: 2.2em;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-    border-radius: 0.7em;
+    
 }
 
 .list_obj {
@@ -146,7 +155,7 @@ body {
     background-color: #b8b8b8;
 }
 
-.list_obj button, #item_list a {
+.list_obj button, .center1 a {
     font-family: "Rubik", sans-serif;
     background: rgb(60, 138, 62);
     color: #FFFFFF;
@@ -161,7 +170,7 @@ body {
     outline: 0;
     border: 0;
 }
-.list_obj button:hover, #item_list a:hover {
+.list_obj button:hover, .center1 a:hover {
     background: #43A047;
 }
 
@@ -179,23 +188,31 @@ body {
     font-size: 2.3em;
 }
 
+.paging {
+    display: inline-block;
+    margin-top: 2%;
+    width: 100%;
+}
+
 #back {
-    max-width: 50%;
-    padding: 0px;
+    width: 25%;
+    max-width: 25%;
+    padding: 1.5em;
     text-decoration: none;
-    margin-top: 15%;
-    font-size: 1em; 
-    transform: translate(10%);
+    
+    font-size: 2.2em; 
+    float: left;
     
 }
 
 #next {
-    max-width: 50%;
-    padding: 0px;
+    width: 25%;
+    max-width: 25%;
+    padding: 1.5em;
     text-decoration: none;
-    margin-top: 15%;
-    font-size: 1em;
-    transform: translate(92%);
+    
+    font-size: 2.2em;
+    float: right;
 }
 
 /* ---------------------------------------------top right section------------------------------------------- */
@@ -373,8 +390,22 @@ iframe {
         overflow: hidden; /* will contain if #first is longer than #second */
         max-width: 100%;
     }
-    #item_list {
+
+    .center1 {
         width: 80%;
+        background: #FFFFFF;
+        
+        margin-bottom: 0.5em;
+        padding-top: 2.2em;
+        padding-bottom: 2.8em;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        border-radius: 0.7em;
+        
+    }
+    #item_list {
+        width: 100%;
         float:left; /* add this */
         
         position: relative;
@@ -384,13 +415,14 @@ iframe {
         z-index: 2;
         background: #FFFFFF;
         
-        margin-bottom: 0.5em;
-        padding-top: 2.2em;
-        padding-bottom: 2.2em;
-        padding-left: 1.5em;
-        padding-right: 1.5em;
-        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-        border-radius: 0.7em;
+        margin-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.24);
+        border-radius: 0;
+       
     }
 
     .list_obj {
@@ -408,7 +440,7 @@ iframe {
         background-color: #b8b8b8;
     }
 
-    .list_obj button, #item_list a {
+    .list_obj button, .center1 a {
         font-family: "Rubik", sans-serif;
         background: rgb(60, 138, 62);
         color: #FFFFFF;
@@ -423,7 +455,7 @@ iframe {
         outline: 0;
         border: 0;
     }
-    .list_obj button:hover, #item_list a:hover {
+    .list_obj button:hover, .center1 a:hover {
         background: #43A047;
     }
 
@@ -440,23 +472,36 @@ iframe {
         min-height: 20px;
     }
 
+    .paging {
+        display: inline-block;
+        margin-top: 2%;
+        width: 100%;
+    }
     #back {
         max-width: 50%;
-        padding: 0px;
+        padding: 1em;
         text-decoration: none;
-        margin-top: 15%;
+        margin-top: 0%;
         font-size: 1em; 
-        transform: translate(10%);
-        
+        transform: translate(0%);
+        display: inline-block;
     }
 
     #next {
         max-width: 50%;
-        padding: 0px;
+        min-width: 95px;
+        padding: 1em;
         text-decoration: none;
-        margin-top: 15%;
+        margin-top: 0%;
         font-size: 1em;
-        transform: translate(495%);
+        display: inline-block;
+        /* transform: translate(495%); */
+        position: relative;
+        
+        transform: translate(0%);
+        float: right;
+        
+        
     }
 
     /* ---------------------------------------------top right section------------------------------------------- */

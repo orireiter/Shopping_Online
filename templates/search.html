@@ -18,23 +18,28 @@
     </div>
     
     <div id="main">    
-        <div id="item_list">
-        {% for item in search_list %}
-            <div class="list_obj">
-                <img class="item_icon_list" src="..\..\static\item_IMG\{{ item['Barcode'] }}.png" onerror="this.src='{{ yot }}';" width="100px" height="100px">    
-                <p class="item_name_list">{{ item['Name'] }}</p>
-                <br>
-                <p class="item_price_list">{{ item['Price'] }}</p>
-                <form>
-                    <button type="submit" name="add_item" value="{{ item['Name'] }},{{ username }}" formmethod="POST" formaction="http://{{ip}}:5001/add_item" formtarget="side">
-                        add
-                    </button>
-                </form>
+        <div class="center1">
+            <div id="item_list">
+            {% for item in search_list %}
+                <div class="list_obj">
+                    <img class="item_icon_list" src="..\..\static\item_IMG\{{ item['Barcode'] }}.png" onerror="this.src='{{ yot }}';" width="100px" height="100px">    
+                    <p class="item_name_list">{{ item['Name'] }}</p>
+                    <br>
+                    <p class="item_price_list">{{ item['Price'] }}</p>
+                    <form>
+                        <button type="submit" name="add_item" value="{{ item['Name'] }},{{ username }}" formmethod="POST" formaction="http://{{ip}}:5001/add_item" formtarget="side">
+                            add
+                        </button>
+                    </form>
+                </div>
+            {% endfor %}        
             </div>
-        {% endfor %}
-            
-        </div>
 
+            <div class="paging">
+                
+            </div>
+        </div>
+        
         <div id="shopping_bag" class="shopping_bag">
             <iframe name="side" src="http://{{ip}}:5001/shop/{{ username }}" frameborder="0"></iframe>
         </div>

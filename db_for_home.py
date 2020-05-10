@@ -1,5 +1,6 @@
 import pymongo,configparser
 from pymongo import MongoClient
+from math import ceil
 
 
 global client
@@ -31,11 +32,16 @@ def show_40(page_num):
     # getting collection
     collection = db_info()
     
-    if int(page_num) < 1 or int(page_num) > 259:
+    # counting items to check how 
+    # many pages should be in the ssite
+    item_count = collection.count_documents(filter={})
+
+    if int(page_num) < 1 or int(page_num) > ceil(item_count / 40):
         
         return "exception"
     
     else : 
+        print(f"max pages {ceil(item_count / 40)}")
         # setting counter by page number, need to set that in URL as well
         counter = ( (int(page_num)-1) * 40 )
 
