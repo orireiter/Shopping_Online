@@ -43,3 +43,4 @@ used with python 3.8 (HAVE NOT CHECKED OTHER VERSIONS OF PYTHON)
 
 
 not implemented yet - auto deletion of past/irrelevant orders, logging to a log file etc...
+about to add - when no barcode is found the mail should say so.
