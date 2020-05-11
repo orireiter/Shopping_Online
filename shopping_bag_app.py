@@ -14,6 +14,7 @@ from email.mime.text import MIMEText
 
 app = Flask(__name__)
 
+# the sever related to organize the shopping bag
 
 #------------------------------------------------------------------#
 # PARSER related
@@ -29,7 +30,7 @@ def get_config(parameter):
 
 # -----------------------------------------------------------#
 
-
+# checks the json of the order, and the renders it to html
 @app.route("/shop/<username>")
 def shopping_bag(username):
     amount, item_names = shopping_processor.load_order(username=username)
@@ -44,7 +45,8 @@ def shopping_bag(username):
 
 
 
-
+# the route to add an item to your bag, adds it to the json
+# work the same to free item, and deleting items
 @app.route("/add_item", methods=['POST'])
 def add_item():
 

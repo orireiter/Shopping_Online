@@ -6,6 +6,9 @@ from docx.shared import Inches, Cm, Pt
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 
+# the processing of everything related to your shopping bag
+
+# loads the json of your order to be displayed later on
 #this need to run everytime the page loads so adding item will be okay
 def load_order(username):
     order_name = str(username)+str(datetime.date.today())+".json"
@@ -37,8 +40,7 @@ def load_order(username):
         
 
 
-# load_order("ori")
-
+# add item to the json, work the same in deleting
 def add_item(item, username):
     path = ".\orders\\"+str(username)+str(datetime.date.today())+".json"
     
@@ -86,6 +88,10 @@ def delete_items(item, username):
     order_json = json.dumps(order_json)
     order_file.write(order_json)
     order_file.close()
+
+
+# creates a word doc with the items, amounts, and barcodes, 
+# gives a random name to avoid problem, this is used in the order sender app
 
 def order_sender(username):
     order_name = str(username)+str(datetime.date.today())+".json"
@@ -149,7 +155,7 @@ def order_sender(username):
         
 
         try:
-            document.add_picture(r'C:\ColBo\static\barcoding\\' + key + '.jpeg', width=Cm(6))
+            document.add_picture(r'.\static\barcoding\\' + key + '.jpeg', width=Cm(6))
         except:
             pass
     ran = str(random.randint(1, 10000))

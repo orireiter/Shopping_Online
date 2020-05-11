@@ -5,6 +5,8 @@ from pymongo import MongoClient
 global client
 client = MongoClient()
 
+# searches db with regex to allow items containing to given word to show up ,
+# better regex need to be set up
 
 #------------------------------------------------------------------#
 # PARSER related

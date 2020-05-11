@@ -6,6 +6,8 @@ from math import ceil
 global client
 client = MongoClient()
 
+# here its only for the main page, showing it 40 items 
+# each time according to the page
 #------------------------------------------------------------------#
 # PARSER related
 
@@ -28,13 +30,16 @@ def db_info():
     collection = db[collection]
     return collection
 
+# also, it makes sure you wont get to page numbers that dont exist
+# example if you 41 items, this makes sure you can only view 40 pages
+ 
 def show_40(page_num):
     # getting collection
     collection = db_info()
     
     # counting items to check how 
     # many pages should be in the ssite
-    item_count = collection.count_documents(filter={})
+    item_count = collection.count_documents(filter={}) + 1
 
     if int(page_num) < 1 or int(page_num) > ceil(item_count / 40):
         

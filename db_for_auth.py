@@ -13,6 +13,7 @@ from email.mime.text import MIMEText
 global client
 client = MongoClient()
 
+# everything related to db against credentials
 
 #------------------------------------------------------------------#
 # PARSER related
@@ -37,6 +38,9 @@ def db_info():
     
     return collection
 
+# checks if the username is already used,
+# if not it registers the person and emails
+# the managing email(itself) about it
 def register(username, password, email, tel):
 
     collection = db_info()
@@ -89,6 +93,9 @@ def register(username, password, email, tel):
 
     return True
 
+# tries to authenticate user, returns true or false and an id
+# this id is used to check someone else didnt just type the url
+# thats a quick security solution but is easy to get past
 def login(username, password):
 
     collection = db_info()

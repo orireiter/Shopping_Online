@@ -1,2 +1,2 @@
 the temp order files will be in this folder and will be json's named the username+date and will be looking like this:
-{"biscuits 0.5kg": "4", "popeyes": "3", "coffee cookies": "3", "milk": "2"}
+orders\ori2020-05-11.json --> {"biscuits 0.5kg": "4", "popeyes": "3", "coffee cookies": "3", "milk": "2"}

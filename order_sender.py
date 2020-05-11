@@ -13,6 +13,9 @@ from email.mime.text import MIMEText
 app = Flask(__name__)
 
 
+# this is the app the sends the oroder when you're done
+
+
 #------------------------------------------------------------------#
 # PARSER related
 
@@ -27,7 +30,7 @@ def get_config(parameter):
 
 # -----------------------------------------------------------#
 
-
+# makes a word file with the order and then sends it in email
 @app.route("/sender/<username>", methods=['POST'])
 def order_page(username):
     

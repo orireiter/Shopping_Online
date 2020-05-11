@@ -21,12 +21,15 @@ def get_config(parameter):
 # -----------------------------------------------------------#
 
 @app.route("/")
-def get_home():
+def redirecting():
     return redirect("/login")
 
 # default route, not used here
 
 # -----------------------------------------------------------#
+# main page, retrieves items from db and their pics,
+# includes a shopping bag in an iframe (different port)
+# to handle actions more fluently
 
 @app.route("/<id>/<username>/<page_num>")
 def home(username, page_num, id):
@@ -47,17 +50,16 @@ def home(username, page_num, id):
         next1 = "/"+str(id)+"/"+str(username)+"/"+str(int(page_num)+1)
         back1 = "/"+str(id)+"/"+str(username)+"/"+str(int(page_num)-1)
         print(next1)
-        yot = r"..\\..\\static\\yotvata_logo.png"
+        yot = r"..\\..\\static\\no_image.png"
         return render_template("home.html",
          username=username, get_40=get_40, page_num=page_num, next1=next1,
          back1=back1, id=id, yot=yot, ip=ip)
 
-# central part
 
-# ability to choose how much of each object to add
-# check out option
 
 # -----------------------------------------------------------#
+# login page - confirms credentials against db 
+# (still unencrypted)
 
 @app.route("/login", methods=['POST','GET'])
 def login():
@@ -83,10 +85,6 @@ def login():
         home = "/"+str(id)+"/"+str(user1)+"/1"
         return redirect(home)
 
-# the login page
-# and retrieve their pass to validate, and not let passing through
-# straight to the shopping part
-
 
 # -----------------------------------------------------------#
 # regisration stuff
@@ -95,7 +93,8 @@ def register():
     
     return render_template("register.html")
 
-
+# when submitting a register form it be sent here,
+# handle redirections better
 @app.route("/register_process", methods=['POST'])
 def register_proccess():
     try:
@@ -126,7 +125,8 @@ def register_proccess():
     return redirect("/login")
 
 # -----------------------------------------------------------#
-# search stuff
+# search stuff, same as home, but it shows items according to
+# what you searched
 @app.route("/search/<id>/<username>", methods=['POST','GET'])
 def search(username, id):
     
@@ -143,7 +143,7 @@ def search(username, id):
         if search_list == "klum":
             return redirect(request.referrer)
         back2 = request.referrer
-        yot = r"..\\..\\static\\yotvata_logo.png"
+        yot = r"..\\..\\static\\no_image.png"
         return render_template("search.html", 
         search_list=search_list, username=username,yot=yot, back2=back2, query=query, id=id, ip=ip)
     except:

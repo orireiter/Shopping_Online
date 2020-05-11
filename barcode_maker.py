@@ -2,6 +2,9 @@ from barcode import EAN13, Code128
 from barcode.writer import ImageWriter
 import os.path
 
+# creates a barcode image with the barcode num given, and names it
+# the name of the product, puts it in static\barcoding
+
 def make(itemname, barcode_num):
     itemname = str(itemname)
     # itemname1 = itemname.replace('"',"")

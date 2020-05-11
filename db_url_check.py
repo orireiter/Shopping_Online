@@ -5,6 +5,9 @@ from pymongo import MongoClient
 global client
 client = MongoClient()
 
+# this pages checks id against username
+# thats to make sure users didnt try to get through login
+# its not really secure and needs to be changed
 
 #------------------------------------------------------------------#
 # PARSER related
