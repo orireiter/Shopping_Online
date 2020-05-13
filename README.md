@@ -2,6 +2,7 @@
 
 made by Ori Reiter
 used with python 3.8 (HAVE NOT CHECKED OTHER VERSIONS OF PYTHON)
+external modules REQUIRED - pymongo, flask, python-barcode, python-docx
 
 1)  to run fluently you need to run the 3 apps:
     app.py
@@ -39,7 +40,10 @@ used with python 3.8 (HAVE NOT CHECKED OTHER VERSIONS OF PYTHON)
         2. check the config file to see what's there
         3. make sure the relevant ports are open (5000,5001,5002),
            i havent put that up to change in the config yet.
-        4. module required - pymongo, flask, python-barcode
+        4. MODULES REQUIRED - pymongo, flask, python-barcode, python-docx
+        5. MUST have mongodb (locally for now), compass is optional and will really help you
+        6. DB's collection of products NEEDS to be created and also filled MANUALLY !!!important to put same name of collection in the config file!!! I added an example product db you can import to see how it looks
+        7. recommended to have your preferred text editor
 
 
 not implemented yet - auto deletion of past/irrelevant orders, logging to a log file etc...
