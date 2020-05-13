@@ -24,6 +24,7 @@ body {
 .form h1 {
   font-size: 5em;
   padding: 10px;
+  margin-top: 10px;
 }
 .form input {
   font-family: "Rubik", sans-serif;
@@ -209,5 +210,9 @@ p {
   
   p {
     font-size: 1em;
+  }
+
+  #blank {
+    background: none;
   }
 }

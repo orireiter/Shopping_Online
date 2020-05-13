@@ -3,7 +3,7 @@
 <head>
     <title>Online Shopping</title>
     <link rel="stylesheet" type="text/css" href="..\..\static\home.css">
-    <link rel="shortcut icon" type="image/png" href="..\..\static\yotvata_logo.png"/>
+    <link rel="shortcut icon" type="image/png" href="..\..\static\logo.png"/>
 </head>
 
 <body>
@@ -23,7 +23,7 @@
             <div id="item_list">
             {% for item in get_40 %}
                 <div class="list_obj">
-                    <img align="center" class="item_icon_list" src="..\..\static\item_IMG\{{ item['Barcode'] }}.png" onerror="this.src='{{ yot }}';" width="100px" height="100px">    
+                    <img align="center" class="item_icon_list" src="..\..\static\item_IMG\{{ item['Barcode'] }}.png" onerror="this.src='{{ no_img }}';" width="100px" height="100px">    
                     <p class="item_name_list">{{ item['Name'] }}</p>
                     <br>
                     <p class="item_price_list">{{ item['Price'] }}</p>
